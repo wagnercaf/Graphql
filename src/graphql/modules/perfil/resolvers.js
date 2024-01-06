@@ -1,9 +1,9 @@
 const db = require("../../../db");
 
-module.exports={
-    Query:{
-        perfis(){
-            return db.perfis;
-        },
+module.exports = {
+  Query: {
+    perfis() {
+      return db.perfis;
     },
+  },
 };

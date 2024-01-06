@@ -1,9 +1,8 @@
-const { ApolloServer} = require("apollo-server");
+const { ApolloServer } = require("apollo-server");
+const graphql = require("./src/graphql");
 
-const {typeDefs, resolvers} = require("graphql");
-
-const server = new ApolloServer({    
-    typeDefs, resolvers
+const server = new ApolloServer({
+  ...graphql,
 });
 
-server.listen().then(({URL}) => console.log(URL));
+server.listen().then(({ url }) => console.log(url));
